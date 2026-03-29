@@ -65,8 +65,8 @@ The fastest way to try Frappe is to play in an already set up sandbox, in your b
 First clone the repo:
 
 ```sh
-git clone https://github.com/frappe/frappe_docker
-cd frappe_docker
+git clone https://github.com/Mehariwamlake/bwh_frappe_apps
+cd bwh_frappe_apps
 ```
 
 Then run:
