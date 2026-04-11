@@ -4,7 +4,7 @@ services:
       - db
       - redis-queue
       - redis-cache
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     deploy:
@@ -20,7 +20,7 @@ services:
       MARIADB_ROOT_PASSWORD: admin
 
   configurator:
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     deploy:
@@ -49,7 +49,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   create-site:
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     deploy:
@@ -104,7 +104,7 @@ services:
       - db-data:/var/lib/mysql
 
   frontend:
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     depends_on:
@@ -133,7 +133,7 @@ services:
     depends_on:
       - redis-queue
       - redis-cache
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     deploy:
@@ -155,7 +155,7 @@ services:
     depends_on:
       - redis-queue
       - redis-cache
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     deploy:
@@ -196,7 +196,7 @@ services:
         condition: on-failure
 
   scheduler:
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     deploy:
@@ -213,7 +213,7 @@ services:
     depends_on:
       - redis-queue
       - redis-cache
-    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:0.0.1
+    image: ghcr.io/mehariwamlake/bwh_frappe_apps/custom:15
     networks:
       - frappe_network
     deploy:
